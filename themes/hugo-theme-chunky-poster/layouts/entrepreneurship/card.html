@@ -1,0 +1,16 @@
+<div class="card h-100">
+    {{ $page := . }}
+        <img data-src="/images/{{ $page.Params.image }}" class="card-img-top mx-auto d-block" alt="{{ $page.Title }}">
+        <div class="card-body">
+            
+            <h4 class="card-title">{{ $page.Title }}</h4>
+            
+            <div class="card-text">
+                {{ $page.Content }}
+
+                <a href="{{ $page.Params.link }}" target="new" class="btn btn-secondary">{{ $page.Params.link_text }}</a>
+
+            </div>
+
+        </div>
+</div>

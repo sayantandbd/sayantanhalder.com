@@ -1,0 +1,18 @@
+.btn {
+    text-decoration: none;
+}
+
+.card-img-top-portfolio {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    max-width: 90%;
+    max-height: 159px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.card-body-justify {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

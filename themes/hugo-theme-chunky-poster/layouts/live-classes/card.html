@@ -1,0 +1,18 @@
+<div class="card h-100">
+    {{ $page := . }}
+    <a href="{{ $page.RelPermalink }}" class="d-block">
+        <div class="card-body">
+            
+            <h4 class="card-title">{{ $page.Title }}</h4>
+            
+            <div class="card-text">
+                <p>
+                    <strong>{{ $page.Title }}</strong><br />
+                    <strong>Fees :</strong> ₹{{ $page.Params.fee }}<br />
+                    <strong>Schedule :</strong> {{ $page.Params.schedule }}
+                </p>
+            </div>
+
+        </div>
+    </a>
+</div>

@@ -1,0 +1,58 @@
+{{ define "main" }}
+<main class="content-page container pt-7 pb-5">
+    <div class="row">
+        <div class="col">
+            <article>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="mb-3">{{ .Title }}</h2>
+
+                        <div class="content">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-4 mt-2">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">Book an Appointment</h4>
+                    <p>
+                        Stuck at any technical issue ? Or, wondering how to uplift your tech journey! Lets discuss
+                    </p>
+
+                    <!-- Calendly link widget begin -->
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sayantandbd/30min'});return false;">Schedule time with me</a>
+                    <!-- Calendly link widget end -->
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 mt-2">
+            <div class="card h-100">
+                {{- range first 1 (where .Site.RegularPages "Type" "in" "live-classes") -}}
+                    {{ $page := . }}
+                        <div class="card-body">
+                            <h4 class="card-title">Live Class</h4>
+                            <p>
+                                <strong>{{ $page.Title }}</strong><br />
+                                <strong>Registration fee :</strong> ₹{{ $page.Params.fee }}<br />
+                                <strong>Schedule :</strong> {{ $page.Params.schedule }}
+                            </p>
+                            <a href="{{ $page.RelPermalink }}" class="btn-link">Check Now</a>
+                        </div>
+                {{- end -}}
+            </div>
+        </div>
+    </div>
+
+    
+</main>
+
+{{ end }}

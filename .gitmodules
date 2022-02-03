@@ -1,0 +1,6 @@
+[submodule "blank"]
+	path = themes/blank
+	url = https://github.com/vimux/blank
+[submodule "hugo-theme-chunky-poster"]
+	path = themes/hugo-theme-chunky-poster
+	url = https://github.com/puresyntax71/hugo-theme-chunky-poster.git

@@ -1,0 +1,182 @@
+{{ define "main" }}
+<main class="homepage container py-6">
+    <!-- Hero -->
+    <div class="hero row">
+        <div class="col position-relative py-lg-7{{ if not .Site.Params.homepageImage }} py-7{{ else }} pb-5{{ end }}">
+            {{- with .Site.Params.homepageImage -}}
+                <div class="homepage-image">
+                    <img src="{{ . | relURL }}" class="img-fluid" alt="Sayantan Halder">
+                </div>
+            {{- end -}}
+
+            <h1 class="display-4">{{ .Site.Title }}</h1>
+            {{- with .Site.Params.description -}}
+                <h3 class="font-weight-normal">{{ . | safeHTML }}</h3>
+            {{- end -}}
+        </div>
+    </div>
+
+    <!-- Latest article -->
+    <!-- {{- range first 1 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) -}}
+        {{ $page := . }}
+        <div class="latest row py-lg-5">
+            <div class="col-lg-6 mb-3">
+                {{- with $page.Params.images -}}
+                    {{- $images := . -}}
+                    {{- with $page.Site.GetPage "section" "images" -}}
+                        {{- with .Resources.GetMatch (strings.TrimPrefix "/images/" (index $images 0)) -}}
+                            {{- $image := .Fill "700x450" -}}
+                            <a href="{{ $page.RelPermalink }}" class="d-block">
+                                <img data-src="{{ $image.RelPermalink }}" class="img-fluid rounded" alt="{{ $page.Title }}">
+                            </a>
+                        {{- end -}}
+                    {{- end -}}
+                {{- end -}}
+            </div>
+            <div class="col-lg-6 mb-3">
+                <h5 class="created text-muted text-uppercase font-weight-bold">{{ $page.Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</h5>
+                <h2><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h2>
+
+                <div class="content">
+                    {{ $page.Summary }}
+                </div>
+            </div>
+        </div>
+    {{- end -}} -->
+
+    <!-- Articles -->
+    <!-- <div class="articles row row-cols-1 row-cols-lg-3">
+        {{ range after 1 (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) }}
+            <div class="col mb-3">
+                {{ .Render "card" }}
+            </div>
+        {{ end }}
+    </div> -->
+
+    <div class="articles row row-cols-1 row-cols-lg-3">
+        <div class="col mb-3">
+            <div class="card h-100">
+                {{- range first 1 (where .Site.RegularPages "Type" "in" "live-classes") -}}
+                    {{ $page := . }}
+                        <div class="card-body">
+                            <h4 class="card-title">Live Class</h4>
+                            <p>
+                                <strong>{{ $page.Title }}</strong><br />
+                                <strong>Fees :</strong> ₹{{ $page.Params.fee }}<br />
+                                <strong>Schedule :</strong> {{ $page.Params.schedule }}
+                            </p>
+                            <a href="{{ $page.RelPermalink }}" class="btn-link">Know More</a>
+                        </div>
+                {{- end -}}
+            </div>
+        </div>
+
+        <div class="col mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">Book an Appointment</h4>
+                    <p>
+                        Stuck at any technical issue ? Or, wondering how to uplift your tech journey! Lets discuss
+                    </p>
+
+                    <!-- Calendly link widget begin -->
+                    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                    <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sayantandbd/30min'});return false;">Schedule time with me</a>
+                    <!-- Calendly link widget end -->
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-3">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h4 class="card-title">Hire for a Project</h4>
+                    <ul>
+                        <li>Website, Mobile Application</li>
+                        <li>Digital Marketing</li>
+                        <li>Graphics/Content Design</li>
+                        <li>Server/DevOps Related</li>
+                    </ul>
+                    <a href="hire-me" class="btn-link">Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="articles row row-cols-1 row-cols-lg-2">
+        <div class="col mb-3">
+            <div class=" h-100">
+                <div class="card-body">
+                    <h4 class="card-title">My entrepreneurial journey</h4>
+                    <p>
+                        Few people get succeeded on this journey. Clearly, I am not one of them. Still, I have journeys to share. The page is dedicated for that.
+                    </p>
+                    <a href="entrepreneurship" class="btn-link">Check Now</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-3">
+            <div class=" h-100">
+                <div class="card-body">
+                    <h4 class="card-title">Micro Blog</h4>
+                    <ul>
+                        {{ range (where .Site.RegularPages "Type" "in" "microblog") }}
+                        {{ $page := . }}
+                            <li><a href="microblog/" class="btn-link">{{ $page.Title }}</a></li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="articles row row-cols-1 row-cols-lg-12">
+        <div class="col mb-3 mt-3">
+                    <h4 class="card-title">My Expertise</h4>
+                    <p>
+                        <img src="images/icons/php.png" alt="php" title="php" height="75px" class="p-1" srcset="">
+                        <img src="images/icons/css.png" alt="css" srcset=""  title="css" height="75px" class="p-1">
+                        <img src="images/icons/html-5.png" alt="html 5" srcset=""  title="html5" height="75px" class="p-1">
+                        <img src="images/icons/javascript.png" alt="javascript" srcset=""  title="js" height="75px" class="p-1">
+                        <img src="images/icons/mysql.png" alt="mysql" srcset=""  title="mysql" height="75px" class="p-1">
+                        <img src="images/icons/nodejs.png" alt="nodejs" srcset=""  title="nodejs" height="75px" class="p-1">
+                        <img src="images/icons/typescript.png" alt="typescript" srcset=""  title="typescript" height="75px" class="p-1">
+                        <img src="images/icons/laravel.png" alt="laravel" srcset=""  title="laravel" height="75px" class="p-1">
+                        <img src="images/icons/mongodb.png" alt="mongodb" srcset=""  title="mongodb" height="75px" class="p-1">
+                        <img src="images/icons/angular.png" alt="angular" srcset=""  title="angular" height="75px" class="p-1">
+                    </p>
+                    <p>
+                        <a href="hire-me/" class="btn-link">View my full expertise</a>
+                    </p>
+        </div>
+    </div>
+
+
+    <div class="articles row row-cols-1 row-cols-lg-12">
+        <div class="col mb-3 mt-3">
+                    <h4 class="card-title">Founders, who believed in me</h4>
+                    <p>
+                        <a href="https://netfrendz.com/" target="new" title="NetFrendz"><img src="images/netfrendz.jpg" alt="NetFrendz" height="100px" class="p-2" srcset=""></a>
+                        <a href="https://www.soinit-ts.com/" target="new" title="Soinit Technology Solutions Pvt Ltd"><img src="images/sts.png" alt="Soinit Technology Solutions Pvt Ltd" srcset="" height="100px" class="p-2"></a>
+                        <a href="http://www.techlearning.co.in/" target="new" title="Tech Learning Solutoins Pvt Ltd"><img src="images/techlearning.jpg" alt="Tech Learning Solutoins Pvt Ltd" srcset="" height="100px" class="p-2"></a>
+                        <a href="#" target="new" title="Affinity Web Systems"><img src="images/affinity.jpg" alt="Affinity Web Systems" srcset="" height="100px" class="p-2"></a>
+                        <a href="https://www.neorigins.com/" target="new" title="NE Origins"><img src="images/ne-origins.jpg" alt="NE Origins" srcset="" height="100px" class="p-2"></a>
+                        <a href="http://mariostay.com/" target="new" title="Mariostay"><img src="images/mariostay.png" alt="Mariostay" srcset="" height="100px" class="p-2"></a>
+                        <a href="https://goextracash.com/" target="new" title="GoExtraCash"><img src="images/extracash.png" alt="GoExtraCash" srcset="" height="100px" class="p-2"></a>
+                        <a href="https://www.megahostzone.com/" target="new" title="MegaHostZone"><img src="images/megahostzone.png" alt="MegaHostZone" srcset="" height="100px" class="p-2"></a>
+                    </p>
+                    <p>
+                        <a href="portfolios/" class="btn-link">Check my portfolio</a>
+                    </p>
+        </div>
+    </div>
+
+
+</main>
+{{ end }}

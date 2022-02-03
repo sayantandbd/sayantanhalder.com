@@ -1,0 +1,22 @@
+<div class="card h-100">
+    {{ $page := . }}
+        <div class="card-body">
+            
+            <strong>{{ $page.Title }}</strong>
+            <small class="card-text text-muted text-lowercase">{{ $page.Date.Format (.Site.Params.dateFormat | default "January 2, 2006" ) }}</small>
+            
+            <div class="card-text">
+                {{ $page.Content }}
+            </div>
+
+            {{- with $page.Params.hashtags -}}
+                <div class="tags">
+                {{- range . -}}
+                        <span class="badge badge-pill badge-light">
+                            <i class="fas fa-hashtag mr-1"></i>{{ . }}
+                        </span>
+                {{- end -}}
+                </div>
+            {{- end -}}
+        </div>
+</div>

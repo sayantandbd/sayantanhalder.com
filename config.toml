@@ -1,0 +1,94 @@
+baseURL = "https://example.com"
+title = "Sayantan Halder"
+copyright = "Copyright © 2021–2022, Sayantan Halder; all rights reserved."
+paginate = 2
+languageCode = "en"
+DefaultContentLanguage = "en"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+googleAnalytics = "UA-114190617-1-x"
+DisqusShortname = ""
+theme = "hugo-theme-chunky-poster"
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    identifier = "entrepreneurship"
+    name = "Entrepreneurship"
+    url = "/entrepreneurship/"
+    weight = 2
+  [[menu.main]]
+    identifier = "portfolios"
+    name = "Portfolio"
+    url = "/portfolio/"
+    weight = 3
+  [[menu.main]]
+    identifier = "microblog"
+    name = "Micro Blog"
+    url = "/microblog/"
+    weight = 4
+  [[menu.main]]
+    identifier = "live-classes"
+    name = "Live Classes"
+    url = "/live-classes/"
+    weight = 5
+  [[menu.main]]
+    identifier = "hure-me"
+    name = "Hire Me"
+    url = "/hire-me/"
+    weight = 6
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+author = "authors"
+
+[params]
+  author = "Sayantan"
+  description = "8yr Exp, Software Developer <br />and Entrepreneur"
+  homepageImage = "/images/dp.jpg"
+  dateFormat = "January 2, 2006"
+  share = true
+  showLanguageSwitcher = false
+
+  # Custom CSS and JS. Relative to /static/css and /static/js respectively.
+  customCSS = []
+  customJS = []
+
+  [params.social]
+    rss = true
+    email = "sayantandbd@gmail.com"
+    facebook = "https://facebook.com/sayantandbd"
+    twitter = "https://twitter.com/sayantanhalder"
+    linkedin = "https://www.linkedin.com/in/sayantandbd/"
+    instagram = "https://stackoverflow.com/sayantandbd"
+    github = "https://github.com/sayantandbd"
+
+  [params.prismJS]
+    enable = true
+    theme = ""
+
+  [params.commento]
+    enable = true
+    url = "https://commento.io"
+
+[markup]
+  [markup.highlight]
+    codeFences = false
+
+[services]
+  [services.instagram]
+    disableInlineCSS = true
+
+  [services.twitter]
+    disableInlineCSS = true
