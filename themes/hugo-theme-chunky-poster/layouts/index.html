@@ -9,9 +9,10 @@
                 </div>
             {{- end -}}
 
-            <h1 class="display-4">{{ .Site.Title }}</h1>
+            <p><img src="{{ "images/autograph-small.png" | relURL }}" height="220px" class="home-autograph-img" alt="Sayantan Halder Autograph"></p>
+            <strong>{{ .Site.Title }}</strong>
             {{- with .Site.Params.description -}}
-                <h3 class="font-weight-normal">{{ . | safeHTML }}</h3>
+                <h3 class="font-weight-light">{{ . | safeHTML }}</h3>
             {{- end -}}
         </div>
     </div>
@@ -112,7 +113,7 @@
                 <div class="card-body">
                     <h4 class="card-title">My entrepreneurial journey</h4>
                     <p>
-                        Few people get succeeded on this journey. Clearly, I am not one of them. Still, I have journeys to share. The page is dedicated for that.
+                        Only few people get success on this journey. Clearly, I am not one of them. Still, I have journeys to share. This page is dedicated for that.
                     </p>
                     <a href="entrepreneurship" class="btn-link">Check Now</a>
                 </div>

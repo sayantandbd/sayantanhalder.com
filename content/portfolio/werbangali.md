@@ -1,5 +1,5 @@
 ---
-title: "Werbangali"
+title: "weRbangali"
 image: "wrb_wide.png"
 link: "https://shop.werbangali.com"
 link_title: "View Project"

@@ -1,5 +1,5 @@
 ---
-title: "Plan a Recharge"
+title: "planArecharge"
 image: "par.png"
 link: "https://planarecharge.com/"
 link_title: "View Project"

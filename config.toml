@@ -1,6 +1,6 @@
 baseURL = "https://example.com"
 title = "Sayantan Halder"
-copyright = "Copyright © 2021–2022, Sayantan Halder; all rights reserved."
+copyright = "Copyright © 2022–2023, Sayantan Halder; all rights reserved."
 paginate = 2
 languageCode = "en"
 DefaultContentLanguage = "en"

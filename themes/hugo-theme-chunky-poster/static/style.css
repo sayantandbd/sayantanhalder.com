@@ -16,3 +16,12 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+.font-weight-light {
+    font-weight: 300 !important;
+}
+
+.home-autograph-img {
+    margin-left: -47px !important;
+    margin-top: -70px;
+}
