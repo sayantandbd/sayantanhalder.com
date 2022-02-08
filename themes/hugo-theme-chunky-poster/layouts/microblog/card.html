@@ -1,5 +1,6 @@
 <div class="card h-100">
     {{ $page := . }}
+    <a href="{{ $page.RelPermalink }}" class="d-block">
         <div class="card-body">
             
             <strong>{{ $page.Title }}</strong>
@@ -19,4 +20,5 @@
                 </div>
             {{- end -}}
         </div>
+    </a>
 </div>
