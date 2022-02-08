@@ -1,4 +1,4 @@
-baseURL = "https://example.com"
+baseURL = "https://sayantanhalder.com"
 title = "Sayantan Halder"
 copyright = "Copyright © 2022–2023, Sayantan Halder; all rights reserved."
 paginate = 2
@@ -71,7 +71,7 @@ author = "authors"
     facebook = "https://facebook.com/sayantandbd"
     twitter = "https://twitter.com/sayantanhalder"
     linkedin = "https://www.linkedin.com/in/sayantandbd/"
-    instagram = "https://stackoverflow.com/sayantandbd"
+    instagram = "https://instagram.com/sayantandbd"
     github = "https://github.com/sayantandbd"
 
   [params.prismJS]
