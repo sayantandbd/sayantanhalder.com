@@ -7,7 +7,7 @@ link_text: "Open Case Study"
 ---
 
 ##### Inception
-Now a days, life without Swiggy/Zomato is unimaginable. Now everything is just a click away. Thousands are tech companies investing trillion and trillion dollar of money just to living experiences better. However, the time I am talking about was just beginning of the Race. Fortunately or unfortunately, we wanted to take a part of it. Here, we mean, me and other two friend of mine who had courage to run a food delivery business. This all started from kitchen of my 1BHK Room. I developed the mobile application, my friend became the cook and somehow, we managed delivery at that time.
+Now a days, life without Swiggy/Zomato is unimaginable. Everything is just a click away. Thousands of tech companies are investing trillion and trillion dollar of money just to make our living experiences better. However, the time I am talking about was just beginning of the Race. Fortunately or unfortunately, we wanted to take a part of it. Here, we mean, me and other two friend of mine who had courage to run a food delivery business. This all started from kitchen of my 1BHK Room. I had developed the mobile application, my friend became the cook and somehow, we managed delivery at that time.
 
 ##### Duration
 2016 - 2018
